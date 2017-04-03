@@ -15,7 +15,7 @@ function printError(error) {
 
 //Connect to the API URL api.openweathermap.org/data/2.5/weather?q={city name},{country code}
 //b0a4f9bb5260d1042b6aa08ab71caff8
-app.get('/process_get', function (req, res) {
+app.get('/', function (req, res) {
 //module.exports =function get(city){
     var request = http.get('http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=b0a4f9bb5260d1042b6aa08ab71caff8', function(response) {
     var body = '';
