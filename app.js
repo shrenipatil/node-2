@@ -1,6 +1,7 @@
 var http = require('http');
 var express = require('express');
 var app = express();
+var geoip = require('geoip-lite');
 app.set('port', (process.env.PORT || 5000))
 //Print message
 //Connect to the API URL api.openweathermap.org/data/2.5/weather?q={city name},{country code}
