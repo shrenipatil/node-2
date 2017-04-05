@@ -9,6 +9,7 @@ app.set('port', (process.env.PORT || 5000))
    var geo=geoip.lookup(ip);
    console.log(geo.city);
    var city= geo.city;
+var city=mumbai;
 app.get('/', function (req, res) {
 //module.exports =function get(city){
     var request = http.get('http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=b0a4f9bb5260d1042b6aa08ab71caff8', function(response) {
