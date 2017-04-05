@@ -3,21 +3,15 @@ var express = require('express');
 var app = express();
 app.set('port', (process.env.PORT || 5000))
 //Print message
-function printWeather(city, weather) {
-    var message = 'In ' + city + ', there is ' + (weather-273.15) + ' degrees.';
-    console.log(message);
-}
-
-//Print out error messages
-function printError(error) {
-    console.error(error.message);
-}
-
 //Connect to the API URL api.openweathermap.org/data/2.5/weather?q={city name},{country code}
 //b0a4f9bb5260d1042b6aa08ab71caff8
+ var ip = "122.15.109.90";
+   var geo=geoip.lookup(ip);
+   console.log(geo.city);
+   var city= geo.city;
 app.get('/', function (req, res) {
 //module.exports =function get(city){
-    var request = http.get('http://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=b0a4f9bb5260d1042b6aa08ab71caff8', function(response) {
+    var request = http.get('http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=b0a4f9bb5260d1042b6aa08ab71caff8', function(response) {
     var body = '';
 
     //Read the data
