@@ -37,7 +37,7 @@ app.get('/', function (req, res) {
 				console.log("temp:::::"+result);
 				console.log("pressure:::::"+result1);
 		    		console.log("humidity:::::"+result3);
-				res.end('Temperature:::::'+result+'ºC\nPressure::::'+result1+' mb\nHumidity::::'+result3+' %');
+				res.end('Temperature:::::'+result+'℃ \nPressure::::'+result1+' mb\nHumidity::::'+result3+' %');
 		  
             } catch(error) {
                 //Parse error
