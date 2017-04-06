@@ -37,7 +37,8 @@ app.get('/', function (req, res) {
 				
 				var result = weatherAPI.main.temp-273.15;
 				console.log("temp:::::"+result);
-				res.end('Temperature:::::'+result+'C');
+		    		res.end('city::::'+city);
+				res.end('Temperature:::::'+result+'C');ss
              //   printWeather(weatherAPI.name, weatherAPI.main.temp);
             } catch(error) {
                 //Parse error
