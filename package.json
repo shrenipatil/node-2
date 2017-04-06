@@ -8,6 +8,7 @@
 },
   "dependencies": {
     "express": "^4.13.3"
+    "geoip-lite": "^1.2.0"
 },
   "engines": {
     "node": "4.0.0"
