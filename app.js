@@ -34,12 +34,13 @@ app.get('/', function (req, res) {
 				console.log("temp:::::"+result);
 				var result1= weatherAPI.main.pressure;
 				var result3=weatherAPI.main.humidity;
+		    		var result4=weatherAPI.wind.speed;
 				console.log("temp:::::"+result);
 				console.log("pressure:::::"+result1);
 		    		console.log("humidity:::::"+result3);
-				res.end('\nCity::::'+city+'\nTemperature:::::'+result+'°C\nPressure::::'+result1+' mb\nHumidity::::'+result3+' %');
+res.end('\nCity::::'+city+'\nTemperature:::::'+result+'°C\nPressure::::'+result1+'  hPa\nHumidity::::'+result3+' %\nWind'+result4' meter/sec');
 		  
-            } catch(error) {
+         } catch(error) {
                 //Parse error
                 printError(error);
             }
