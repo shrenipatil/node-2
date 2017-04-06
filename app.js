@@ -1,19 +1,25 @@
+
 var http = require('http');
 var express = require('express');
 var app = express();
-//var geoip = require('geoip-lite');
+var geoip = require('geoip-lite');
 app.set('port', (process.env.PORT || 5000))
 //Print message
 //Connect to the API URL api.openweathermap.org/data/2.5/weather?q={city name},{country code}
 //b0a4f9bb5260d1042b6aa08ab71caff8
 //var ip = "122.15.109.90";
-var ip=request.headers['x-forwarded-for'] || request.connection.remoteAddress;
-var geo=geoip.lookup(ip);
-console.log(geo.city);
-var city= geo.city;
+
+
 app.get('/', function (req, res) {
-//module.exports =function get(city){
-    var request = http.get('http://api.openweathermap.org/data/2.5/weather?q='+city+'&appid=b0a4f9bb5260d1042b6aa08ab71caff8', function(response) {
+		
+	//calculate city
+	var ip=req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+	console.log(ip);
+	var geo=geoip.lookup(ip);
+	console.log(geo);
+	//var city= geo.city;	
+	
+    var request = http.get('http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=b0a4f9bb5260d1042b6aa08ab71caff8', function(response) {
     var body = '';
 
     //Read the data
@@ -58,3 +64,5 @@ printError(err);
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'))
 })
+
+
