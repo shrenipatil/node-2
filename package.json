@@ -8,13 +8,6 @@
 },
   "dependencies": {
     "express": "^4.13.3"
-		"async": "^2.1.1",
-		"colors": "^1.1.2",
-		"glob": "^7.1.1",
-		"iconv-lite": "^0.4.13",
-		"lazy": "^1.0.11",
-		"rimraf": "^2.5.2",
-		"unzip": "^0.1.11"
 },
   "engines": {
     "node": "4.0.0"
