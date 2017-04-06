@@ -42,7 +42,7 @@ app.get('/', function (req, res) {
 				console.log("temp:::::"+result);
 				console.log("pressure:::::"+result1);
 		    		console.log("humidity:::::"+result3);
-				res.end('Temperature:::::'+result+'c\nPressure::::'+result1+'\nHumidity::::'+result3);
+				res.end('Temperature:::::'+result+'c\nPressure::::'+result1+'mb\nHumidity::::'+result3+'%');
 		    		//res.end('city::::'+city+'\nTemperature:::::'+result+'C');
 				//res.end('Temperature:::::'+result+'C');
              //   printWeather(weatherAPI.name, weatherAPI.main.temp);
