@@ -37,7 +37,13 @@ app.get('/', function (req, res) {
 				
 				var result = weatherAPI.main.temp-273.15;
 				console.log("temp:::::"+result);
-		    		res.end('city::::'+city+'\nTemperature:::::'+result+'C');
+		    		var result = weatherAPI.main.temp-273.15;
+				var result1= weatherAPI.main.pressure;
+				var result3=weatherAPI.main.humidity;
+				console.log("temp:::::"+result);
+				console.log("pressure:::::"+result1);
+				res.end('Temperature:::::'+result+'c\nPressure::::'+result1+'\nHumidity::::'+result3);
+		    		/res.end('city::::'+city+'\nTemperature:::::'+result+'C');
 				//res.end('Temperature:::::'+result+'C');
              //   printWeather(weatherAPI.name, weatherAPI.main.temp);
             } catch(error) {
